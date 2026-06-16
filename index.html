@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedidos Zona Amarilla</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f2d750;
+}
+
+header{
+background:#080807;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.promo-container{
+background:#ffcc00;
+overflow:hidden;
+white-space:nowrap;
+padding:12px 0;
+font-weight:bold;
+}
+
+.promo-text{
+display:inline-block;
+animation:marquee 15s linear infinite;
+}
+
+@keyframes marquee{
+0%{transform:translateX(-100%);}
+100%{transform:translateX(100vw);}
+}
+
+.hero{
+height:350px;
+background:url('https://i.postimg.cc/wTsDTQPM/miha-rekar-ISVt-BKNh-J2g-unsplash.jpg') center center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero h1{
+background:rgba(0,0,0,.6);
+color:white;
+padding:20px;
+border-radius:10px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:40px 0;
+}
+
+h2{
+margin:30px 0 15px;
+color:#333;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#d62828;
+margin:10px 0;
+}
+
+button{
+background:#d62828;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#b71c1c;
+}
+
+.cart{
+background:white;
+padding:20px;
+margin-top:40px;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+.cantidad{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.cantidad button{
+width:35px;
+height:35px;
+padding:0;
+font-size:18px;
+border-radius:50%;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:10px;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+.total{
+font-size:28px;
+font-weight:bold;
+color:#d62828;
+margin-top:20px;
+}
+
+.whatsapp{
+width:100%;
+background:#25D366;
+margin-top:15px;
+font-size:18px;
+}
+
+.limpiar{
+width:100%;
+background:#6c757d;
+margin-top:10px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>ZONA AMARILLA</h1>
+<p>Pedidos en Línea</p>
+</header>
+
+<div class="promo-container">
+<div class="promo-text">
+🎉 APROVECHA NUESTRA PROMO DEL DÍA 🎉
+Compra 2 hamburguesas y recibe un refresco gratis |
+Envío gratis en compras mayores a $300 |
+¡Ordena ahora!
+</div>
+</div>
+
+<section class="hero">
+<h1>De tu Zona favorita hasta tu puerta</h1>
+</section>
+
+<div class="container">
+
+<h2>Menú</h2>
+
+<div class="menu">
+
+<!-- 1 -->
+<div class="card">
+<img src="https://i.postimg.cc/Y99p28XK/557464834-122102917797044550-7928146537722045269-n.jpg">
+<div class="card-content">
+<h3>Hamburguesa Especial</h3>
+<div class="price">$120</div>
+<button onclick="agregar('Hamburguesa Especial',120)">Agregar</button>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<img src="https://i.postimg.cc/j55sqvMg/721429856-122136840999044550-176297771062852799-n.jpg">
+<div class="card-content">
+<h3>Monchi Doggo</h3>
+<div class="price">$150</div>
+<button onclick="agregar('Monchi Doggo',150)">Agregar</button>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="https://i.postimg.cc/G22c3zXM/723155033-122136840675044550-1348783700790103213-n.jpg">
+<div class="card-content">
+<h3>Chester Burguer</h3>
+<div class="price">$220</div>
+<button onclick="agregar('Chester Burguer',220)">Agregar</button>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<img src="https://i.postimg.cc/LXXH4vyd/723216939-122136840849044550-62733063461006350-n.jpg">
+<div class="card-content">
+<h3>Burguer Tocino</h3>
+<div class="price">$95</div>
+<button onclick="agregar('Burguer Tocino',95)">Agregar</button>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<img src="https://i.postimg.cc/gJTGxR7T/724045282-122136841017044550-3802807036566143192-n.jpg">
+<div class="card-content">
+<h3>Medusa</h3>
+<div class="price">$240</div>
+<button onclick="agregar('Medusa',240)">Agregar</button>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<img src="https://i.postimg.cc/V66Ys4KV/724500165-122136841053044550-5490744778011000744-n.jpg">
+<div class="card-content">
+<h3>Bombas de Papa</h3>
+<div class="price">$80</div>
+<button onclick="agregar('Bombas de Papa',80)">Agregar</button>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<img src="https://i.postimg.cc/C11FMJc6/724535183-122136841041044550-8159845290313836096-n.jpg">
+<div class="card-content">
+<h3>Papa Kiki</h3>
+<div class="price">$110</div>
+<button onclick="agregar('Papa Kiki',110)">Agregar</button>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550317138-10000687a72b">
+<div class="card-content">
+<h3>Burrito Especial</h3>
+<div class="price">$130</div>
+<button onclick="agregar('Burrito Especial',130)">Agregar</button>
+</div>
+</div>
+
+</div>
+
+<h2>Bebidas</h2>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1554866585-cd94860890b7">
+<div class="card-content">
+<h3>Coca-Cola 600ml</h3>
+<div class="price">$25</div>
+<button onclick="agregar('Coca-Cola 600ml',25)">Agregar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1624517452488-04869289c4ca">
+<div class="card-content">
+<h3>Fanta Naranja</h3>
+<div class="price">$25</div>
+<button onclick="agregar('Fanta Naranja',25)">Agregar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e">
+<div class="card-content">
+<h3>Sprite 600ml</h3>
+<div class="price">$25</div>
+<button onclick="agregar('Sprite 600ml',25)">Agregar</button>
+</div>
+</div>
+
+</div>
+
+<div class="cart">
+
+<h2>Tu Pedido</h2>
+
+<div id="lista"></div>
+
+<label>Nombre</label>
+<input type="text" id="cliente">
+
+<label>Dirección</label>
+<input type="text" id="direccion">
+
+<label>Entrega</label>
+<select id="envio" onchange="calcular()">
+<option value="0">Recoger en sucursal</option>
+<option value="30">Zona Centro $30</option>
+<option value="50">Zona Periférica $50</option>
+</select>
+
+<div class="total">
+Total: $<span id="total">0</span>
+</div>
+
+<button class="whatsapp" onclick="enviarWhatsapp()">
+📲 Enviar Pedido por WhatsApp
+</button>
+
+<button class="limpiar" onclick="limpiarPedido()">
+🗑 Limpiar Pedido
+</button>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Zona amarilla
+</footer>
+
+<script>
+
+let carrito=[];
+
+function agregar(nombre,precio){
+
+let producto=carrito.find(
+item=>item.nombre===nombre
+);
+
+if(producto){
+
+producto.cantidad++;
+
+}else{
+
+carrito.push({
+nombre:nombre,
+precio:precio,
+cantidad:1
+});
+
+}
+
+mostrar();
+
+}
+
+function aumentar(nombre){
+
+let producto=carrito.find(
+item=>item.nombre===nombre
+);
+
+producto.cantidad++;
+
+mostrar();
+
+}
+
+function disminuir(nombre){
+
+let producto=carrito.find(
+item=>item.nombre===nombre
+);
+
+if(producto){
+
+producto.cantidad--;
+
+if(producto.cantidad<=0){
+
+carrito=carrito.filter(
+item=>item.nombre!==nombre
+);
+
+}
+
+}
+
+mostrar();
+
+}
+
+function mostrar(){
+
+let lista=document.getElementById("lista");
+
+lista.innerHTML="";
+
+carrito.forEach(item=>{
+
+lista.innerHTML+=`
+
+<div class="cart-item">
+
+<div>
+<strong>${item.nombre}</strong><br>
+$${item.precio} c/u
+</div>
+
+<div class="cantidad">
+
+<button onclick="disminuir('${item.nombre}')">-</button>
+
+<span>${item.cantidad}</span>
+
+<button onclick="aumentar('${item.nombre}')">+</button>
+
+</div>
+
+<div>
+$${item.precio*item.cantidad}
+</div>
+
+</div>
+
+`;
+
+});
+
+calcular();
+
+}
+
+function calcular(){
+
+let subtotal=0;
+
+carrito.forEach(item=>{
+
+subtotal+=item.precio*item.cantidad;
+
+});
+
+let envio=parseInt(
+document.getElementById("envio").value
+);
+
+let total=subtotal+envio;
+
+document.getElementById("total").innerText=total;
+
+}
+
+function limpiarPedido(){
+
+if(confirm("¿Deseas vaciar el pedido?")){
+
+carrito=[];
+
+document.getElementById("lista").innerHTML="";
+
+document.getElementById("total").innerText="0";
+
+}
+
+}
+
+function enviarWhatsapp(){
+
+let cliente=
+document.getElementById("cliente").value;
+
+let direccion=
+document.getElementById("direccion").value;
+
+let pedido="*NUEVO PEDIDO*%0A%0A";
+
+pedido+="Cliente: "+cliente+"%0A";
+pedido+="Dirección: "+direccion+"%0A%0A";
+
+carrito.forEach(item=>{
+
+pedido+="• "+item.nombre+
+" x"+item.cantidad+
+" = $"+
+(item.precio*item.cantidad)+
+"%0A";
+
+});
+
+pedido+="%0A";
+pedido+="TOTAL: $"+
+document.getElementById("total").innerText;
+
+window.open(
+"https://wa.me/522943242462?text="+pedido,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
