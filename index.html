@@ -84,15 +84,38 @@ box-shadow:0 3px 10px rgba(0,0,0,.1);
 transition:.3s;
 }
 
+.card2{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+transition:.3s;
+}
+
 .card:hover{
+transform:translateY(-5px);
+}
+
+.card2:hover{
 transform:translateY(-5px);
 }
 
 .card img{
 width:100%;
-height:200px;
+height:180px;
 object-fit:cover;
 }
+
+.card2 img{
+width:50%;
+height:180px;
+object-fit:cover;
+}
+
+
+
+
+
 
 .card-content{
 padding:15px;
@@ -198,9 +221,8 @@ margin-top:40px;
 <div class="promo-container">
 <div class="promo-text">
 🎉 APROVECHA NUESTRA PROMO DEL DÍA 🎉
-Compra 2 hamburguesas y recibe un refresco gratis |
-Envío gratis en compras mayores a $300 |
-¡Ordena ahora!
+               Envío *zona centro $10, periferia $15 |
+		¡Ordena ahora!
 </div>
 </div>
 
@@ -216,83 +238,155 @@ Envío gratis en compras mayores a $300 |
 
 <!-- 1 -->
 <div class="card">
-<img src="https://i.postimg.cc/Y99p28XK/557464834-122102917797044550-7928146537722045269-n.jpg">
+<img src="https://i.postimg.cc/VLX9CXWJ/bbq.png">
 <div class="card-content">
-<h3>Hamburguesa Especial</h3>
-<div class="price">$120</div>
-<button onclick="agregar('Hamburguesa Especial',120)">Agregar</button>
+<h3>BBQ o Habanero </h3>
+<p>Arrachera c/ queso amarillo, aros de cebolla y Salsa BBQ o Habanero.</p>
+<div class="price">$130</div>
+<button onclick="agregar('BBQ o Habanero',130)">
+Agregar
+</button>
 </div>
 </div>
 
 <!-- 2 -->
 <div class="card">
-<img src="https://i.postimg.cc/j55sqvMg/721429856-122136840999044550-176297771062852799-n.jpg">
+<img src="https://i.postimg.cc/Pr1bw1Qv/tocino.png">
 <div class="card-content">
-<h3>Monchi Doggo</h3>
-<div class="price">$150</div>
-<button onclick="agregar('Monchi Doggo',150)">Agregar</button>
+<h3>Tocino</h3>
+<p>Arrachera con Tocino, queso crema, jalapeños y cebolla carmelizada.</p>
+<div class="price">$95</div>
+<button onclick="agregar('Tocino',95)">
+Agregar
+</button>
 </div>
 </div>
 
+
+
 <!-- 3 -->
 <div class="card">
-<img src="https://i.postimg.cc/G22c3zXM/723155033-122136840675044550-1348783700790103213-n.jpg">
+<img src="https://i.postimg.cc/RVw1HwLh/chester.png">
 <div class="card-content">
-<h3>Chester Burguer</h3>
-<div class="price">$220</div>
-<button onclick="agregar('Chester Burguer',220)">Agregar</button>
+<h3>Chester</h3>
+<p>Carne arrachera con mermelada de tocino y queso cheddar.</p>
+<div class="price">$120</div>
+<button onclick="agregar('Chester',120)">
+Agregar
+</button>
 </div>
 </div>
 
 <!-- 4 -->
 <div class="card">
-<img src="https://i.postimg.cc/LXXH4vyd/723216939-122136840849044550-62733063461006350-n.jpg">
+<img src="https://i.postimg.cc/Kvt7MtDZ/medusa.png">
 <div class="card-content">
-<h3>Burguer Tocino</h3>
-<div class="price">$95</div>
-<button onclick="agregar('Burguer Tocino',95)">Agregar</button>
+<h3>Medusa</h3>
+<p>Arrachera c/ queso crema, aderezo Ranch, y Zarzamora.</p>
+<div class="price">$120</div>
+<button onclick="agregar('Medusa',120)">
+Agregar
+</button>
 </div>
 </div>
 
 <!-- 5 -->
 <div class="card">
-<img src="https://i.postimg.cc/gJTGxR7T/724045282-122136841017044550-3802807036566143192-n.jpg">
+<img src="https://i.postimg.cc/hPV8dV1g/kiki.png">
 <div class="card-content">
-<h3>Medusa</h3>
-<div class="price">$240</div>
-<button onclick="agregar('Medusa',240)">Agregar</button>
+<h3>Ki ki </h3>
+<p>Papa rellena horneada, relleno de queso manchego, carne asada.</p>
+<div class="price">$115</div>
+<button onclick="agregar('Ki Ki',115)">
+Agregar
+</button>
 </div>
 </div>
 
 <!-- 6 -->
 <div class="card">
-<img src="https://i.postimg.cc/V66Ys4KV/724500165-122136841053044550-5490744778011000744-n.jpg">
+<img src="https://i.postimg.cc/zXTwgTF8/kui.png">
 <div class="card-content">
-<h3>Bombas de Papa</h3>
-<div class="price">$80</div>
-<button onclick="agregar('Bombas de Papa',80)">Agregar</button>
+<h3>Kui Kui </h3>
+<p>Con mermelada de tocino, queso manchego, parmesano y papas.</p>
+<div class="price">$85</div>
+<button onclick="agregar('Kui Kui',85)">
+Agregar
+</button>
 </div>
 </div>
 
+
 <!-- 7 -->
 <div class="card">
-<img src="https://i.postimg.cc/C11FMJc6/724535183-122136841041044550-8159845290313836096-n.jpg">
+<img src="https://i.postimg.cc/Hsb0yb9x/milka.png">
 <div class="card-content">
-<h3>Papa Kiki</h3>
-<div class="price">$110</div>
-<button onclick="agregar('Papa Kiki',110)">Agregar</button>
+<h3>Milka Dogo</h3>
+<p>Con salsa tipo pizza, queso mozarella y especias.</p>
+<div class="price">$80</div>
+<button onclick="agregar('Milka Dogo',80)">
+Agregar
+</button>
 </div>
 </div>
 
 <!-- 8 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1550317138-10000687a72b">
+<img src="https://i.postimg.cc/RVw1HwLt/monchi.png">
 <div class="card-content">
-<h3>Burrito Especial</h3>
-<div class="price">$130</div>
-<button onclick="agregar('Burrito Especial',130)">Agregar</button>
+<h3>Monchi Dogo</h3>
+<p>Con salchicha envuelta con tocino americano, chorizo y jalapeños.</p>
+<div class="price">$80</div>
+<button onclick="agregar('Monchi Dogo',80)">
+Agregar
+</button>
 </div>
 </div>
+
+<!-- 9 -->
+<div class="card">
+<img src="https://i.postimg.cc/ZK6Pd6x0/papas.png">
+<div class="card-content">
+<h3>Papas A la francesa</h3>
+<div class="price">$40</div>
+<button onclick="agregar('Papas A la francesa',40)">
+Agregar
+</button>
+</div>
+</div>
+
+
+<!-- 10 -->
+<div class="card">
+<img src="https://i.postimg.cc/5N85C8S6/flaming.png">
+<div class="card-content">
+<h3>Papas Flaming</h3>
+<p>Orden de 6 piezas.</p>
+<div class="price">$89</div>
+<button onclick="agregar('Papas Flaming',89)">
+Agregar
+</button>
+</div>
+</div>
+
+
+
+<!-- 11 -->
+<div class="card">
+<img src="https://i.postimg.cc/ydw9JNJs/bombaspapa.png">
+<div class="card-content">
+<h3>Bombas de Papa</h3>
+<p>Orden de 6 piezas.</p>
+<div class="price">$89</div>
+<button onclick="agregar('Bombas de Papa',89)">
+Agregar
+</button>
+</div>
+</div>
+
+
+
+
 
 </div>
 
@@ -300,8 +394,8 @@ Envío gratis en compras mayores a $300 |
 
 <div class="menu">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1554866585-cd94860890b7">
+<div class="card2">
+<img src="https://i.postimg.cc/NfqKhSqz/coca.jpg">
 <div class="card-content">
 <h3>Coca-Cola 600ml</h3>
 <div class="price">$25</div>
@@ -309,21 +403,21 @@ Envío gratis en compras mayores a $300 |
 </div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1624517452488-04869289c4ca">
+<div class="card2">
+<img src="https://i.postimg.cc/YqKvcZKy/fanta.jpg">
 <div class="card-content">
-<h3>Fanta Naranja</h3>
-<div class="price">$25</div>
-<button onclick="agregar('Fanta Naranja',25)">Agregar</button>
+<h3>Fanta Naranja 300 ml</h3>
+<div class="price">$15</div>
+<button onclick="agregar('Fanta Naranja 300 ml',15)">Agregar</button>
 </div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e">
+<div class="card2">
+<img src="https://i.postimg.cc/kX32rz3Y/sprite.jpg">
 <div class="card-content">
-<h3>Sprite 600ml</h3>
-<div class="price">$25</div>
-<button onclick="agregar('Sprite 600ml',25)">Agregar</button>
+<h3>Sprite 300ml</h3>
+<div class="price">$15</div>
+<button onclick="agregar('Sprite 300 ml',15)">Agregar</button>
 </div>
 </div>
 
@@ -344,8 +438,8 @@ Envío gratis en compras mayores a $300 |
 <label>Entrega</label>
 <select id="envio" onchange="calcular()">
 <option value="0">Recoger en sucursal</option>
-<option value="30">Zona Centro $30</option>
-<option value="50">Zona Periférica $50</option>
+<option value="10">Zona Centro $10</option>
+<option value="15">Zona Periférica $15</option>
 </select>
 
 <div class="total">
@@ -535,7 +629,7 @@ pedido+="TOTAL: $"+
 document.getElementById("total").innerText;
 
 window.open(
-"https://wa.me/522943242462?text="+pedido,
+"https://wa.me/522941269350?text="+pedido,
 "_blank"
 );
 
